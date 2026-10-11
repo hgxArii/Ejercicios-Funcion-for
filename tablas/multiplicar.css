@@ -1,42 +1,191 @@
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    min-height: 100vh;
+    padding: 32px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(ellipse at 50% 0%, #46105c 0%, transparent 55%),
+        #100713;
+}
+
+/* ENCABEZADO */
+header {
+    width: fit-content;
+    max-width: 100%;
+    padding: 23px 25px;
     text-align: center;
-    background-color: #f4f4f4;
+    background: #21102b;
+    border: 1px solid #ed2bff;
+    border-radius: 14px;
+    box-shadow: 0 0 12px #ed2bff45, 0 0 28px #ed2bff20;
 }
 
-button {
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    font-size: 16px;
+header h1 {
+    margin: 8px 0 12px;
+    font-size: 25px;
+    color: #ff4fd8;
+    text-shadow: 0 0 8px #ff4fd880;
+}
+
+header p {
+    max-width: 265px;
+    margin: 0 auto 20px;
+    color: #f5d8ff;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* BOTÓN PROBAR */
+header button {
+    padding: 11px 25px;
+    border: 1px solid #ff8be8;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff29c8, #b721ff);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     cursor: pointer;
+    box-shadow: 0 0 12px #ff29c855, 0 4px 0 #75118f;
+    transition: 0.2s ease;
 }
 
+header button:hover {
+    background: linear-gradient(135deg, #ff65d9, #d45aff);
+    box-shadow: 0 0 20px #ff29c880, 0 4px 0 #75118f;
+    transform: translateY(-2px);
+}
+
+header button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #75118f;
+}
+
+/* PANEL */
+main {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 13px;
+    background: #1c1025;
+    border: 1px solid #542c66;
+    border-radius: 13px;
+    box-shadow: 0 8px 25px #00000060;
+}
+
+/* LISTA VERTICAL */
 .tabla {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    max-width: 100%;
 }
 
+/* CAJAS AJUSTADAS AL CONTENIDO */
 .fila {
-    background-color: white;
-    border: 1px solid #ddd;
-    padding: 12px;
-    margin-bottom: 5px;
-    font-size: 18px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #9b35b5;
+    border-left: 3px solid #ff4fd8;
+    border-radius: 7px;
+    background: #30143b;
+    color: #ffe0fa;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    box-shadow: 0 0 9px #ff4fd815;
+    transition: 0.2s ease;
 }
 
-@media (max-width: 600px) {
+.fila:nth-child(even) {
+    background: #3a1830;
+    border-color: #bd367f;
+    border-left-color: #ff3978;
+    color: #ffd5e5;
+}
+
+.fila:nth-child(3n) {
+    background: #29200d;
+    border-color: #9c8310;
+    border-left-color: #eaff00;
+    color: #f4ff9c;
+}
+
+.fila:hover {
+    transform: translateX(3px);
+    box-shadow: 0 0 13px #ff4fd855;
+    border-top-color: #ff4fd8;
+}
+
+/* PIE */
+footer {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    background: #1c1025;
+    border: 1px solid #542c66;
+    border-radius: 8px;
+    color: #d9b9e9;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
     body {
+        padding: 22px 12px;
+        gap: 15px;
+    }
+
+    header {
+        padding: 20px 17px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        max-width: 240px;
+        font-size: 12px;
+    }
+
+    main {
         padding: 10px;
     }
 
+    .tabla {
+        width: fit-content;
+        max-width: 100%;
+        gap: 8px;
+    }
+
     .fila {
-        font-size: 16px;
+        max-width: 100%;
+        padding: 9px 10px;
+        font-size: 13px;
     }
 }
