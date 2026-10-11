@@ -1,27 +1,107 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla del 3</title>
+    <title>Mi Mundo de Multiplicaciones</title>
     <link rel="stylesheet" href="multiplicar.css">
+    <script src="multiplicar.js" defer></script>
 </head>
 <body>
 
-    <button>PROBAR</button>
+    <main class="contenedor">
+        <header class="encabezado">
+            <div class="decoracion">🌈 ⭐ 🎈</div>
+            <h1>¡Mi Mundo de Multiplicaciones!</h1>
+            <p>Aprende las tablas de multiplicar de una forma divertida.</p>
+        </header>
 
-    <div class="tabla">
-        <div class="fila">3 × 1 = 3</div>
-        <div class="fila">3 × 2 = 6</div>
-        <div class="fila">3 × 3 = 9</div>
-        <div class="fila">3 × 4 = 12</div>
-        <div class="fila">3 × 5 = 15</div>
-        <div class="fila">3 × 6 = 18</div>
-        <div class="fila">3 × 7 = 21</div>
-        <div class="fila">3 × 8 = 24</div>
-        <div class="fila">3 × 9 = 27</div>
-        <div class="fila">3 × 10 = 30</div>
-    </div>
+        <section class="tarjeta">
+            <h2>🎨 ¡Crea tu tabla!</h2>
+
+            <p class="instruccion">
+                Escribe un número y descubre su tabla de multiplicar.
+            </p>
+
+            <form id="formularioTabla">
+                <label for="numeroTabla">¿Qué tabla quieres aprender?</label>
+
+                <input
+                    type="number"
+                    id="numeroTabla"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="3"
+                    placeholder="Escribe un número"
+                    required
+                >
+
+                <p class="ayuda">
+                    Elige un número entero del 1 al 100.
+                </p>
+
+                <button type="submit" class="boton-probar">
+                    ⭐ PROBAR ⭐
+                </button>
+            </form>
+
+            <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+
+            <section class="resultado-tabla" aria-label="Tabla de multiplicar">
+                <h2 id="tituloTabla">Tabla del 3</h2>
+
+                <div id="contenedorTabla" class="tabla">
+                    <div class="fila">
+                        <span>3 × 1</span>
+                        <span class="resultado">= 3</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 2</span>
+                        <span class="resultado">= 6</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 3</span>
+                        <span class="resultado">= 9</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 4</span>
+                        <span class="resultado">= 12</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 5</span>
+                        <span class="resultado">= 15</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 6</span>
+                        <span class="resultado">= 18</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 7</span>
+                        <span class="resultado">= 21</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 8</span>
+                        <span class="resultado">= 24</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 9</span>
+                        <span class="resultado">= 27</span>
+                    </div>
+                    <div class="fila">
+                        <span>3 × 10</span>
+                        <span class="resultado">= 30</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <footer>
+            <p>💖 Creado por: Ari 💖</p>
+            <p>¡Practica, aprende y diviértete cada día!</p>
+        </footer>
+    </main>
 
 </body>
 </html>
